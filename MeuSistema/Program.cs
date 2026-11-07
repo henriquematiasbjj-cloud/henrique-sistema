@@ -15,8 +15,8 @@ class Program
             switch (opção)
             {
                 case 1: usuario.cadastrar(); break;
-                case 2: usuario.listar(): break;
-                
+                case 2: usuario.listar(); break;
+
             }
         }
     }

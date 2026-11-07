@@ -1,8 +1,8 @@
 class usuario
 {
-    public static List<string> nomes = new list<string>();
+    public static List<string> nomes = new List<string>();
     public static List<string> logins = new List<string>();
-    public static List<string> senha = new List<string>();
+    public static List<string> senhas = new List<string>();
 
     public static void cadastrar()
     {
@@ -29,7 +29,7 @@ class usuario
             logins.Add(login);
             senhas.Add(senha);
             Console.WriteLine("Usuario cadastrado!");
-            
+
 
         }
     }
