@@ -46,7 +46,42 @@ class usuario
         {
             // a senha nunca e mostrada
             Console.WriteLine((i + 1) + ". " + nomes[i] + "(" + logins[i] + ")");
-            
+
         }
     }
+
+    public static void Buscar()
+    {
+        Console.Write("Buscar por nome: ");
+        string termo = Console.ReadLine().ToLower();
+
+        for (int i = 0; i < nomes.Count; i++)
+        {
+            if (nomes[i].ToLower().Contains(termo))
+            {
+                Console.WriteLine(nomes[i] + " (" + logins[i] + ")");
+
+            }
+        }
+    } 
+
+    public static void Remover()
+    {
+        Console.Write("Usuario a remover: ");
+        string login = Console.ReadLine();
+        int i = logins.IndexOf(login);   // -1 se não achar
+
+        if (i == -1)
+        {
+            Console.WriteLine("Usuario não encontrdao. ");
+            return;
+        }
+
+        // remover das tres listas, senão os dados se misturam
+        nomes.RemoveAt(i);
+        logins.RemoveAt(i);
+        senhas.RemoveAt(i);
+        Console.WriteLine("Usuario removido!");
+    }
+
 }
