@@ -36,6 +36,17 @@ class usuario
 
     public static void listar()
     {
-        
+        if (nomes.Count == 0)
+        {
+            Console.WriteLine("Nenhum usuario cadastrado. ");
+            return;
+
+        }
+        for (int i = 0; i < nomes.Count; i++)
+        {
+            // a senha nunca e mostrada
+            Console.WriteLine((i + 1) + ". " + nomes[i] + "(" + logins[i] + ")");
+            
+        }
     }
 }
