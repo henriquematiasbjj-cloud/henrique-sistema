@@ -84,4 +84,24 @@ class usuario
         Console.WriteLine("Usuario removido!");
     }
 
+    public static void Entrar()
+    {
+        for (int tentativa = 1; tentativa <= 3; tentativa++)
+        {
+            Console.Write("Usuário: ");
+            string login = Console.ReadLine();
+            Console.Write("senha: ");
+            string senha = Console.ReadLine();
+
+            int i = logins.IndexOf(login);
+            if (i != -1 && senhas[i] == senha)
+            {
+                Console.WriteLine("Bem-vindo(a), " + nomes[i]);
+                return;
+
+            }
+            Console.WriteLine("Usuário ou senha invalidas. ");
+        }
+    }
+
 }
